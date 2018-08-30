@@ -45,8 +45,9 @@ The {\tt RBM} package can be installed and loaded through the following R code.
 Install the {\tt RBM} package with:
 %code 1
 <<eval=FALSE, echo=TRUE>>=
-source("http://bioconductor.org/biocLite.R")
-biocLite("RBM")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("RBM")
 @
 
 Load the {\tt RBM} package with:
